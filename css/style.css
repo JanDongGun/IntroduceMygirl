@@ -1,0 +1,314 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif !important;
+  color: #0e2431;
+}
+
+.color {
+  color: #4070f4;
+}
+
+header {
+  width: auto;
+  padding: 0 15%;
+  height: 100vh;
+}
+
+.header__top {
+  display: flex;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all 0.2s;
+  padding: 2% 15%;
+  transition: all 0.4s;
+  z-index: 1000;
+}
+
+.header__brand:visited,
+.header__brand:link {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 20px;
+  color: #0e2431;
+}
+
+.nav {
+  margin-left: auto;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav li {
+  padding: 0 25px;
+}
+
+.nav li a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 20px;
+  color: #0e2431;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.header__top.sticky {
+  background-color: #0e2431;
+  padding: 1% 15%;
+}
+
+.header__top.sticky a {
+  color: white;
+}
+
+.nav li a::before {
+  content: "";
+  width: 0%;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #4070f4;
+  transition: all 0.3s;
+}
+
+.nav li a:hover::before {
+  width: 100%;
+}
+
+.header__main {
+  display: flex;
+  height: 70%;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.header__main-title {
+  flex: 0 0 50%;
+}
+
+.heading-primary {
+  font-size: 4rem;
+  word-spacing: 10px;
+}
+
+.heading-primary span {
+  color: #4070f4;
+}
+.header__main-img {
+  flex: 0 0 50%;
+}
+.header__main-img img {
+  width: 95%;
+  border-radius: 50%;
+}
+
+.btn-title:link,
+.btn-title:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.25rem;
+  background-color: #4070f4;
+  color: white;
+  padding: 15px 40px;
+  border-radius: 10px;
+  margin-top: 2rem;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.btn-title:hover {
+  background-color: #104cf1;
+  transform: translateY(-5px);
+}
+
+.header__social a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: #0e2431;
+  display: inline-block;
+  padding: 0 15px;
+  transition: all 0.3s;
+}
+
+.header__social a:first-child {
+  padding-left: 0;
+}
+
+.header__social a:hover {
+  color: #4070f4;
+  transform: translateY(-5px);
+}
+
+/* about  */
+
+.section-about,
+.section-skills,
+.section-hobbies,
+.section-contact {
+  padding: 5% 15%;
+}
+
+.heading-secondary {
+  font-size: 2.5rem;
+  color: #4070f4;
+  text-align: center;
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 4.5rem;
+}
+
+.heading-secondary::after {
+  content: "";
+  width: 10%;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  background-color: #4070f4;
+  transform: translateX(-50%);
+}
+
+.about__main {
+  display: flex;
+}
+
+.about__img {
+  flex: 0 0 50%;
+}
+
+.about__img img {
+  width: 80%;
+  border-radius: 10px;
+}
+
+.about__des {
+  flex: 0 0 50%;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heading-tertiary {
+  font-size: 2.2rem;
+}
+
+.section__des {
+  margin-top: 1rem;
+  line-height: 1.5;
+  font-size: 1.25rem;
+}
+
+/* skills */
+
+.skills {
+  display: flex;
+}
+
+.skills__title {
+  flex: 0 0 40%;
+}
+
+.skills__title .skill {
+  margin-bottom: 0.4rem;
+  font-size: 1.1rem;
+}
+
+.skills__img {
+  flex: 0 0 50%;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.skills__img img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.progress {
+  height: 20px;
+  border-radius: 16px;
+  margin-bottom: 1rem;
+}
+
+.progress-bar {
+  border-radius: 16px;
+  background-color: #4070f4;
+}
+
+/* hobbies */
+
+.hobbies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.hobbies__img {
+  flex: 0 0 32%;
+  margin-bottom: 1.2rem;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.hobbies__img img {
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.hobbies__img img:hover {
+  transform: scale(1.2);
+}
+
+/* footer */
+
+.footer {
+  width: 100%;
+  background-color: #0e2431;
+  color: white;
+  margin-top: 5%;
+}
+
+.section-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading-footer {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.contact__social a {
+  text-decoration: none;
+  color: white;
+  font-size: 2.5rem;
+  padding: 0 1rem;
+  transition: all 0.3s;
+}
+
+.contact__social a:hover {
+  color: #4070f4;
+}
+
+.section-contact p {
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+}
